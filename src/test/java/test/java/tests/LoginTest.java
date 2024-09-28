@@ -4,6 +4,8 @@ import java.io.IOException;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 import main.java.base.TestBase;
 import main.java.modules.Login;
 import main.java.modules.Shopping;

@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import main.java.utility.DataUtility;
 import main.java.utility.ReadProperties;
 
-public class TestBase implements ITestListener{
+public class TestBase {
 	protected WebDriver driver;
 	public TestBase() {
 	}
@@ -30,13 +30,5 @@ public class TestBase implements ITestListener{
 	@AfterMethod
 	public void shutDownDriver() {
 		driver.quit();
-	}
-	public void onTestSuccess(ITestResult result) {
-      	DataUtility util=new DataUtility();
-      	try {
-			util.writeResult(result.getName(),1);
-		} catch (EncryptedDocumentException | IOException e) {
-			e.printStackTrace();
-		}
 	}
 }
