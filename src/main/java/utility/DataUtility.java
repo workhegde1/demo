@@ -13,9 +13,7 @@ public class DataUtility {
 	public DataUtility() {
 	}
 	public String getData(String testCase) throws EncryptedDocumentException, IOException {
-		System.out.println(System.getProperty("user.dir"));
 		String testcasefile = ReadProperties.readConfig().getProperty("testcases");
-		System.out.println(testcasefile);
 		File file = new File(System.getProperty("user.dir")+testcasefile);
 		Workbook workbook = WorkbookFactory.create(file);
 		Sheet sheet = workbook.getSheet("Testcases");

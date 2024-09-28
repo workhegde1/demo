@@ -33,7 +33,6 @@ private List<WebElement> productList;
 	public void addToCart(String name) {
 		for(WebElement product:productList) {
 		String text=product.findElement(By.xpath("//div[@class='inventory_item_name ']")).getText();
-         System.out.println(text);
 		if(text.equalsIgnoreCase(name)) {
 			product.findElement(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"))
 			.click();
